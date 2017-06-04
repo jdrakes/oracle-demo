@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Junkies</title>
+    <link rel="icon" type="image/png" href="/img/leanpub_question-circle.png">
+    <link rel="shortcut icon" href="/img/favicon-web-v3.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/adminpage.css">
+    <script type="text/javascript" src="/js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Survey Junkies</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/signup">Sign Up</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class='active'>
+                        <a href="" id='username'></a>
+                    </li>
+                    <li class='active'>
+                        <a href="/admin/logout" id='logout'><span class="glyphicon glyphicon-log-out"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="content-holder" class="row">
+        <div id="content" class="col-xs-7 center-block">
+            <div id="tab" class="container">
+                <ul class="nav nav-pills">
+                    <li class="active">
+                        <a href="#questionHolder" data-toggle="tab">Create Question</a>
+                    </li>
+                    <li><a href="#results" data-toggle="tab">Results</a>
+                    </li>
+                </ul>
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="questionHolder">
+                        <h3>Create a New Question</h3>
+                        <h4>Must fill out question box and write answer choices for choice boxes one and two. Choice box three is optional.</h4>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Write Question</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form id="question-form" action="/admin/question" method="post">
+                                    <textarea id="question" name="question" class="form-control" rows="3"></textarea>
+                                    <input id='choice1' name="choice1" type="text" class="choice form-control" placeholder="Answer Choice 1">
+                                    <input id='choice2' name="choice2" type="text" class="choice form-control" placeholder="Answer Choice 2">
+                                    <input id='choice3' name="choice3" type="text" class="choice form-control" placeholder="Answer Choice 3">
+                                    <button class="btn btn-survey-purple" type="submit">Create Question</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="results">
+                        <h3>Survey Results</h3>
+                        <select id='results-select' class="form-control">
+                            <option value="defualt" disabled="true" selected="true">Choose a Question</option>
+                        </select>
+                        <div id="chart-holder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/highcharts-4.2.6.js"></script>
+    <script type="text/javascript" src="/js/adminpage.js"></script>
+    <script type="text/javascript" src="/js/createquestion.js"></script>
+    <script type="text/javascript" src="/js/surveyresults.js"></script>
+</body>
+
+</html>

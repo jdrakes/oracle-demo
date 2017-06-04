@@ -1,0 +1,18 @@
+#content p {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    color: #0089ff;
+    font-size: 20px;
+}
+
+#photoHolder {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+#photoHolder img {
+    width: 100%;
+}

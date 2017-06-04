@@ -1,0 +1,40 @@
+#content p {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    color: #4301c5;
+    font-size: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#photoHolder {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+
+#photoHolder img {
+    width: 100%;
+}
+
+.navbar,
+.jumbotron {
+    margin-bottom: 0;
+}
+
+.jumbotron h1,
+.jumbotron h2 {
+    text-align: center;
+}
+
+#content-holder {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#content {
+    margin-top: 50px;
+    padding: 0;
+}
