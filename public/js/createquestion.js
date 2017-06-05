@@ -32,6 +32,7 @@ $("#question-form").submit(function(evt) {
         alert(result);
       else
         alert('Your question has been created.');
+        $('#question-form')[0].reset();
     });
   }
 });
