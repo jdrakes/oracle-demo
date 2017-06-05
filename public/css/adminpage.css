@@ -36,6 +36,11 @@
     color: white;
 }
 
+.panel>.panel-heading {
+    background-color: white;
+    border-width: 0;
+}
+
 #tab .nav-pills > li > a {
     border-radius: 4px 4px 0 0;
 }
@@ -43,4 +48,10 @@
 #chart-holder {
     border-radius: 25px;
     overflow: hidden;
+}
+
+#content input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
 }
