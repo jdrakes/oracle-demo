@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: oracle1
+      MYSQL_DATABASE: oracle
+      MYSQL_USER: jdtdrakes
+      MYSQL_PASSWORD: drakes1
+  oracle-demo-app:
+    depends_on:
+      - mysql
+    image: jdtdrakes/oracle-demo:remote-1
+    ports:
+      - "3002:3002"
+    restart: always

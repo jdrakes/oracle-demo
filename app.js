@@ -24,7 +24,7 @@ var app = express();
 // Pre Application Settings
 // Initialize sequelize database connection
 var sequelize = new Sequelize('oracle', 'root', 'oracle1', {
-  host: 'localhost',
+  host: 'mysql',
   dialect: 'mysql',
   pool: { max: 5, min: 0, idle: 10000 }
 });
