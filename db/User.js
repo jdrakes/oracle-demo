@@ -1,8 +1,8 @@
 var Sequelize = require('sequelize');
 
 // Initialize sequelize database connection
-var sequelize = new Sequelize('oracle', 'root', 'oracle1', {
-  host: 'mysql',
+var sequelize = new Sequelize('oracle', 'root', 'Oracledemo1!', {
+  host: '129.150.72.156',
   dialect: 'mysql',
   pool: { max: 5, min: 0, idle: 10000 }
 });
